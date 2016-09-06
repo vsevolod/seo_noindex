@@ -30,13 +30,13 @@ module SeoNoindex
 
       indexed = %w{
         /lorem/indexed
+        /noindexed/lorem
         /indexed/ipsum
         /indexed?a=b&dolor=true
         /indexed?option=sit
       }
 
       noindexed = %w{
-        /noindexed/lorem
         /ipsum/no_indexed
         /no_indexed?dolor=false
         /indexed?a=b&sit=false
@@ -50,9 +50,9 @@ module SeoNoindex
       end
 
       noindexed.each do |current_url|
-        context "for #{current_url} indexed" do
+        context "for #{current_url} no indexed" do
           let(:url){ current_url }
-          it{ is_expected.to be false }
+          it{ is_expected.to be true }
         end
       end
 

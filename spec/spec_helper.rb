@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'pry'
 require 'seo_noindex'
 
 RSpec.configure do |config|

@@ -15,7 +15,7 @@ module SeoNoindex
     private
 
     def check_noindex(env)
-      !!disallowed_array.find{ |x| env['REQUEST_URI'] =~ Regexp.new('$' + x.first) }
+      !!disallowed_array.find{ |x| env['REQUEST_URI'] =~ Regexp.new('^' + x.first) }
     end
 
     def disallowed_array

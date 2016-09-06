@@ -1,6 +1,6 @@
 # SeoNoindex
 
-Add noindex tag for disallowed paths in robots.txt file
+Add noindex tag in head for disallowed paths from robots.txt file
 
 ## Installation
 
@@ -26,3 +26,13 @@ Add helper to your view file in head section
     <header>
       <%= robots_noindex_tag -%>
     </header>
+
+## Example
+
+For example in robots.txt we have this string:
+
+    Disallow: /admin
+
+And if we follow **https://sitename/admin** we get this:
+
+    <meta name="robots" content="noindex">
