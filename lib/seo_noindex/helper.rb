@@ -2,7 +2,7 @@ module SeoNoindex
   module ViewHelper
 
     def robots_noindex_tag
-      if request && request.env['seo_noindex']
+      if request && request.env && request.env['seo_noindex']
         meta_tag_noindex
       end
     end
